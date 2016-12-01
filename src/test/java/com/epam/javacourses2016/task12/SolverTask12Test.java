@@ -19,11 +19,11 @@ public class SolverTask12Test {
         boolean wrongSort = false;
         boolean previousGreater = false;
 
-        for (Integer integer : list) {
-            if (integer > value) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) > value) {
                 previousGreater = true;
             }
-            if (integer < value && previousGreater) {
+            if (list.get(i) <= value && previousGreater) {
                 wrongSort = true;
                 break;
             }
